@@ -1,0 +1,11 @@
+stages:
+- name: 构建
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: testdockerfiles
+      pushRemote: true
+      registry: 127.0.0.1:34070
+timeout: 60
+notification: {}
